@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="My 6th webpage">
+    <meta name="keywordss" content="Hello, World! website">
+    <meta name="author" content="Jonathan Pasco-Arnone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My webpage</title>
+  </head>
+  <body>
+    <h2>Input a random number (positive or negative)</h2>
+    <h5>P.S if you enter a decimal number, the number will be rounded down</h5>
+    <input id="number-id">
+    <br><br>
+    <button id="check-result">Check Result</button>
+    <h2 id="answer"></h2>
+    <script>
+    let numberInput;
+    function Testing() {
+      numberInput = document.getElementById("number-id").value;
+      numberInput = Math.floor(numberInput);
+      if (numberInput < 0) {
+        document.getElementById("answer").innerHTML = (numberInput + " is a negative number");
+        alert (numberInput + " is a negative number");
+      } else {
+        document.getElementById("answer").innerHTML = (numberInput + " is a positive number");
+        alert (numberInput + " is a positive number");
+      }}
+      document.getElementById("check-result").addEventListener("click",Testing);
+    </script>
+  </body>
+</html>
